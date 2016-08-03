@@ -1,0 +1,22 @@
+
+<div class="row">
+  <div class="col s6 offset-s3">
+
+    <%= form_for :user , :url => {:action => 'login'} do |u| %>
+    <div class="input-field">
+      <%= u.label :email, "电子邮箱", for: 'email' %>
+      <%= u.text_field :email, class: 'validate', type: 'email' %>
+    </div>
+    <div class="input-field">
+      <%= u.label :pwd, "密码", for: 'password' %>
+      <%= u.text_field :pwd, class: 'validate', type: 'password', id: 'pwd' %>
+    </div>
+    <%= u.submit "登录", class: 'waves-effect btn secondary-content' %>
+    <% end %>
+  </div>
+  <% if @hint != nil  %>
+    <script type="text/javascript" charset="utf-8">
+      Materialize.toast(('<%= @hint%>'),4000);
+    </script>
+  <% end %>
+</div>
