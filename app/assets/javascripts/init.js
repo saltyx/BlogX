@@ -15,4 +15,7 @@ $( document ).ready(function(){
     $('.modal-trigger').leanModal();
     $('.parallax').parallax();
     $('.slider').slider({full_width: true});
+    tinyMCE.init({
+        selector: 'textarea.editor'
+    });
 })
