@@ -4,12 +4,13 @@
   <title>BlogX</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">-->
   <%= csrf_meta_tags %>
 </head>
 <body>
 <nav>
   <div class="nav-wrapper teal lighten-2">
-    <a href="#" class="brand-logo center"><i class="large material-icons">stars</i></a>
+    <a href="javascript:void(0)" class="brand-logo center"><i class="large material-icons">stars</i></a>
     <ul id="nav-mobile" class="right">
       <% if session[:current_user] == nil %>
       <li><%= link_to '登录' ,{:controller => 'account'},:class => 'btn-large waves-effect waves-light'%></li>

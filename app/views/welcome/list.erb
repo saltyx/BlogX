@@ -1,0 +1,12 @@
+<div class="row">
+  <% if !@category.empty? %>
+    <div class="collection">
+        <% @category.each do |c| %>
+            <%= link_to c.cname,{:controller => 'welcome',:action => 'category',:id => c},:class => 'large collection-item' %>
+        <% end %>
+    </div>
+  <% else %>
+      <div style="top: 30%;left: 40%;position: fixed"><i class="large material-icons">info_outline</i></div>
+      <div style="top: 45%;left: 41.5%;position: fixed">No Content</div>
+  <% end %>
+</div>
