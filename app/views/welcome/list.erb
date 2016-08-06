@@ -2,7 +2,7 @@
   <% if !@category.empty? %>
     <div class="collection">
         <% @category.each do |c| %>
-            <%= link_to c.cname,{:controller => 'welcome',:action => 'category',:id => c},:class => 'large collection-item' %>
+            <%= link_to c.cname,{:controller => 'welcome',:action => 'category',:cno => c.cno},:class => 'large collection-item' %>
         <% end %>
     </div>
   <% else %>

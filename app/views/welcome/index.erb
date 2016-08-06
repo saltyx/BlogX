@@ -1,14 +1,33 @@
-<div class="parallax-container">
+<main>
+  <div class="parallax-container">
   <div class="parallax">
     <img src="<%= image_url("bg.jpg")%>">
   </div>
 </div>
-<div class="section white">
-  <div class="row container">
-    <h2 class="header">分享我所热爱的，记录此时此刻</h2>
-    <div class="col offset-s4"><%= link_to '从此开始',{:controller => 'welcome',:action => 'list'},:class => 'btn-large waves-effect waves-teal' %></div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">分享我所热爱的，记录此时此刻</h2>
+      <div class="col offset-s4"><%= link_to '从此开始',{:controller => 'welcome',:action => 'list'},:class => 'btn-large waves-effect waves-teal' %></div>
+    </div>
   </div>
-</div>
-<div class="parallax-container">
-  <div class="parallax"><img src="<%= image_url("bg.jpg")%>"></div>
-</div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="<%= image_url("bg.jpg")%>"></div>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 offset-l2 s12">
+          <h4 class="white-text">Contact</h4>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="mailto:shiyan233@hotmail.com"><i class="midlle material-icons">email</i><h6>shiyan233@hotmail.com</h6></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2016 saltyx.cn
+      </div>
+    </div>
+  </footer>
+</main>

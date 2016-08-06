@@ -1,0 +1,46 @@
+<% if @blog.errors.any? %>
+    <% @blog.errors.full_messages.each do |msg| %>
+        <script type="text/javascript" charset="utf-8">
+          Materialize.toast(('<%= msg%>'),4000);
+        </script>
+    <% end %>
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <fieldset>
+        <legend><i class="large material-icons">note</i></legend>
+        <p>Now! <%= Time.now %></p>
+      </fieldset>
+    </div>
+    <fieldset>
+      <legend><i class="large material-icons">create</i></legend>
+      <%= form_for @blog,:url => {:controller => 'blog',:action => 'create'} do |b| %>
+          <div class="row">
+            <div class="col s12">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">forward</i>
+                <%= b.text_field :title, class: 'validate', type: 'text',id: 'i_title' %>
+                <%= b.label :title, "标题", for: 'i_title' %>
+              </div>
+              <div class="input-field col s6">
+                <%= b.select(:cno) do %>
+                    <% Category.all.each do |c| %>
+                        <%= content_tag(:option,c.cname, value: c.cno ) %>
+                    <% end %>
+                <% end %>
+                <label>博客标签</label>
+              </div>
+            </div>
+            <div class="input-field col s12">
+              <%= b.text_area :content, :class => "tinymce", :rows => 120, :cols => 120 %>
+              <%= tinymce %>
+            </div>
+            <br><br>
+            <div class="col s3 offset-s8"><%= b.submit 'send', class: 'waves-effect waves-light btn material-icons' %></div>
+          </div>
+      <% end %>
+    </fieldset>
+  </div>
+</div>

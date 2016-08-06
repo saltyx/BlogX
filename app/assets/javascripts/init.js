@@ -16,6 +16,8 @@ $( document ).ready(function(){
     $('.parallax').parallax();
     $('.slider').slider({full_width: true});
     tinyMCE.init({
-        selector: 'textarea.editor'
+        selector: 'textarea.editor',
+        min_height:800
     });
+    $('select').material_select();
 })

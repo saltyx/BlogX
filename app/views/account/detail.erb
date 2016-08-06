@@ -1,21 +1,2 @@
-<div class="container">
-  <div class="row">
-    <fieldset>
-      <legend><i class="large material-icons">note</i></legend>
-      <% if !@category.empty? %>
-      <% @category.each do |c| %>
-        <div class="chip"><%= c.cname %></div>
-      <% end %>
-      <% else %>
 
-      <% end %>
-    </fieldset>
-    <fieldset>
-      <legend><i class="large material-icons">create</i></legend>
-      <div>
-        <%= tinymce %>
-        <%= text_area_tag :content, "", :class => "tinymce", :rows => 40, :cols => 120 %>
-      </div>
-    </fieldset>
-  </div>
-</div>
+<%= link_to 'new blog',{:controller => 'blog', :action => 'new'} %>

@@ -17,3 +17,11 @@
 $primary-color: color("blue", "lighten-2") !default;
 @import "materialize";
 @import "materialize/extras/nouislider";
+
+footer.page-footer{
+  background-color: teal;
+  margin-top: 0px;
+}
+.mainpage{
+  background-color: teal;
+}
