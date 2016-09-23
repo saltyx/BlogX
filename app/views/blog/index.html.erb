@@ -1,0 +1,12 @@
+
+<div class="container">
+  <% if @blog != nil %>
+      <h3><%= @blog.title  %></h3>
+      <div class="row">
+        <div class="col s12">
+          <%= sanitize @blog.content %>
+        </div>
+
+      </div>
+  <% end %>
+</div>
