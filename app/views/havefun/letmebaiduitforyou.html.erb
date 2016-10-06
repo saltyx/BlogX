@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col s4 offset-m4"><h3 class="center">Let Me</h3></div>
+    <div class="col s4 offset-m3"><img class="center-block" height="200px"src="<%= image_url("baidu.gif")%>"></div>
+    <div class="col s4 offset-m4"><h3 class="center">It For You</h3></div>
+    <%= form_for :search_thing, :url => {:controller => 'havefun' ,:action => 'letmebaiduitforyou'} do |f|%>
+        <%= f.text_field :word, class:'col s8 offset-m2', placeholder: '输入你想知道啥' %>
+        <%= f.submit '去百度', class: 'col s4 offset-m4 waves-effect waves-light btn'%>
+     <% end %>
+  </div>
+</div>
+
+
