@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'havefun/letmebaiduitforyou'
+
   get 'blog/index'
 
   get 'blog/create'
