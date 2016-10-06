@@ -77,5 +77,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   #config.assets.precompile << "tinymce-jquery.js"
-  config.assets.precompile += ['init.js', 'news.js','tinymce-jquery.js']
+  config.assets.precompile += ['init.js', 'news.js','tinymce-jquery.js','havefun.js']
 end
